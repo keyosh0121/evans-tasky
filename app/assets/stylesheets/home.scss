@@ -215,9 +215,15 @@ div{
   }
   .east-form{
     background-image: url('east.png');
+    @media(max-width: 600px){
+      background-image: url('east-smart.png');
+    }
   }
   .west-form{
-    background-image: url('west.png');
+    background-image: url('west-smart.png');
+    @media(max-width: 600px){
+
+    }
   }
   .title{
     font-size: 28px;
