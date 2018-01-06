@@ -1,0 +1,92 @@
+<div class="form-inner">
+  <% if @direction == "east"%>
+    <div class="east-form">
+      <div class="form">
+
+        <%= form_tag('/east/reserve') do%>
+        <span class="title">Evans' blue × Tasky5 卒業コンサート(関東公演) ご予約</span>
+        <p class="description">Evans'blue × Tasky5 卒業コンサートのご予約ができます。<br>
+        こちらは関東(東京・大塚Deepa、3/23開催)公演のご予約ページです。関西公演をご予約の方は下のリンクから関西公演のご予約フォームへ移動することができます。
+        <%= link_to('/west/reserve') do %>
+          <div class="link">関西公演のご予約はこちら</div>
+        <% end %>
+        <% if @reservation %>
+          <% if @reservation.errors.any? %>
+            <div class="errors">
+            <% @reservation.errors.full_messages.each do |message| %>
+              <%= message %><br>
+            <% end %>
+            </div>
+          <% end %>
+        <% end %>
+        </p>
+      <p class="content">ご予約者様氏名</p>
+      <input type="text" name="name" placeholder="氏名を入力してください">
+      <p class="content">Emailアドレス</p>
+      <input type="email" name="email" placeholder="メールアドレスを入力してください">
+      <p class="content">Emailアドレス再入力</p>
+      <input type="email" name="confirm" placeholder="メールアドレス再入力">
+      <p class="content">ご予約人数</p>
+      <select name="amount">
+        <option disabled selected>選択してください</option>
+        <option value="1">1名</option>
+        <option value="2">2名</option>
+        <option value="3">3名</option>
+        <option value="4">4名</option>
+      </select>
+      <p class="content">メッセージなど</p>
+      <textarea name="message" placeholder="メンバーに伝言や備考などを自由にご記載ください"></textarea>
+      <div class="caution">
+        Eメールアドレスに添付したリンクをクリックすると、ご予約完了となります。メールアドレスの誤入力によってメールが届かない場合がございますので、メールアドレスは正確にご入力ください。ご予約のキャンセルは１週間前までに(tasky5hark@gmail.com)までお問い合わせください。
+      </div>
+      <input type="submit" name="" value="送信" class="submit">
+      <% end %>
+      </div>
+    </div>
+  <% else %>
+    <div class="west-form">
+      <div class="form">
+
+        <%= form_tag('/west/reserve') do%>
+        <span class="title">Evans' blue × Tasky5 卒業コンサート(関西公演) ご予約</span>
+        <p class="description">Evans'blue × Tasky5 卒業コンサートのご予約ができます。<br>
+        こちらは関西(大阪 梅田TRAD、3/13開催)公演のご予約ページです。関東公演をご予約の方は下のリンクから関東公演のご予約フォームへ移動することができます。
+        <%= link_to('/east/reserve') do %>
+          <div class="link">関東公演のご予約はこちら</div>
+        <% end %>
+        <% if @reservation %>
+          <% if @reservation.errors.any? %>
+            <div class="errors">
+            ご予約が完了していません<br>
+            <% @reservation.errors.full_messages.each do |message| %>
+              <%= message %><br>
+            <% end %>
+            </div>
+          <% end %>
+        <% end %>
+        </p>
+      <p class="content">ご予約者様氏名</p>
+      <input type="text" name="name" placeholder="氏名を入力してください">
+      <p class="content">Emailアドレス</p>
+      <input type="email" name="email" placeholder="メールアドレスを入力してください">
+      <p class="content">Emailアドレス再入力</p>
+      <input type="email" name="confirm" placeholder="メールアドレス再入力">
+      <p class="content">ご予約人数</p>
+      <select name="amount">
+        <option disabled selected>選択してください</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <p class="content">メッセージなど</p>
+      <textarea name="message" placeholder="メンバーに伝言や備考などを自由にご記載ください"></textarea>
+      <div class="caution">
+        Eメールアドレスに添付したリンクをクリックすると、ご予約完了となります。メールアドレスの誤入力によってメールが届かない場合がございますので、メールアドレスは正確にご入力ください。ご予約のキャンセルは１週間前までに(tasky5hark@gmail.com)までお問い合わせください。
+      </div>
+      <input type="submit" name="" value="送信" class="submit">
+      <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

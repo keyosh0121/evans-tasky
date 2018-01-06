@@ -1,0 +1,71 @@
+<div class="detail-inner">
+  <% if @direction == "east" %>
+  <div class="east-inner">
+    <div class="detail-title">
+      <span class="detail-present">Tasky5 presents</span> <br>
+      <span class="title-main">Evans' blue <br> × <br> Tasky5 </span><br>
+      Graduation Concert <br>
+      <span class="koen">関東(東京)公演</span> <br>
+      <span class="live-title">"Paint Red till all is blue"</span> <br>
+      <span class="live-date">2018年 3月23日</span>
+    </div>
+    <div class="detail-contents">
+      <%= link_to('/east/reserve') do %>
+        <div class="reserve-btn">ご予約はこちら(関東)</div>
+      <% end %>
+      <div class="detail-description">
+        <span>"Paint Red till all is Blue"とは</span> <br><br>
+        京都大学ClazyClefよりKaja!2017出演経験のあるEvans' blue、早稲田大学SCSよりJAM2016に出演したTasky5、東西の２バンドによる卒業前最後のアカペラ・コンサートです。ハーモニーを追求してきた学生バンド2つの集大成を、東西それぞれの舞台にてお届けします。<br><br>"卒業前に、私たちの全力のハーモニーで会場を覆い尽くしたい"という思いを、Tasky5のテーマカラーであるRed(Deep red)と、Evans' blueのBlueを散りばめて表現した"Before we say Goodbye, Paint Red till all is Blue" というタイトルを関東・関西2公演に分けて名付けています。<br>
+
+      </div>
+      <div class="band-detail">
+        <span class="band-name">Tasky5</span>
+        <img src="assets/tasky.JPG" alt="">
+        <span class="band-description">早稲田大学アカペラサークルStreet Corner Symphony所属。聖歌などバラード曲を中心に歌う大学四年生のみの男声5声バンド。</span><br>
+      </div>
+      <div class="band-detail">
+        <span class="band-name">Evans' blue</span>
+        <img src="assets/evans.jpg" alt="">
+        <span class="band-description">京都大学アカペラサークルCrazyClef所属。北欧のグループ"Rajaton"の曲を中心にカバー。</span><br>
+      </div>
+      <%= link_to('/east/reserve') do %>
+        <div class="reserve-btn">ご予約はこちら(関東)</div>
+      <% end %>
+    </div>
+  </div>
+  <% else %>
+   <div class="west-inner">
+    <div class="detail-title">
+      <span class="detail-present"> Evans' blue presents</span> <br>
+      <span class="title-main">Tasky5<br> × <br>Evans' blue</span><br>
+      Graduation Concert <br>
+      <span class="koen">関西(大阪)公演</span> <br>
+      <span class="live-title">"Before we say Goodbye,"</span> <br>
+      <span class="live-date">2018年 3月13日</span>
+    </div>
+    <div class="detail-contents">
+      <%= link_to('/west/reserve') do %>
+        <div class="reserve-btn">ご予約はこちら(関西)</div>
+      <% end %>
+      <div class="detail-description">
+        <span>"Before we say Goodbye,"とは</span> <br><br>
+        京都大学ClazyClefよりKaja!2017出演経験のあるEvans' blue、早稲田大学SCSよりJAM2016に出演したTasky5、東西の２バンドによる卒業前最後のアカペラ・コンサートです。ハーモニーを追求してきた学生バンド2つの集大成を、東西それぞれの舞台にてお届けします。<br><br>"卒業前に、私たちの全力のハーモニーで会場を覆い尽くしたい"という思いを、Tasky5のテーマカラーであるRed(Deep red)と、Evans' blueのBlueを散りばめて表現した"Before we say Goodbye, Paint Red till all is Blue" というタイトルを関東・関西2公演に分けて名付けています。<br>
+
+      </div>
+      <div class="band-detail">
+        <span class="band-name">Evans' blue</span>
+        <img src="assets/evans.jpg" alt="">
+        <span class="band-description">京都大学アカペラサークルCrazyClef所属。北欧のグループ"Rajaton"の曲を中心にカバー。</span><br>
+      </div>
+      <div class="band-detail">
+        <span class="band-name">Tasky5</span>
+        <img src="assets/tasky.JPG" alt="">
+        <span class="band-description">早稲田大学アカペラサークルStreet Corner Symphony所属。聖歌などバラード曲を中心に歌う大学四年生のみの男声5声バンド。</span><br>
+      </div>
+      <%= link_to('/west/reserve') do %>
+        <div class="reserve-btn">ご予約はこちら(関西)</div>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>
