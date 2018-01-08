@@ -13,3 +13,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('turbolinks:load', function() {
+  var h = $(window).height();
+  $('.loader-bg ,.loader').height(h).css('display','block');
+});
+
+$(window).on('turbolinks:load', function() { //全ての読み込みが完了したら実行
+  $('.loader-bg').delay(900).fadeOut(800);
+  $('.loader').delay(600).fadeOut(300);
+});
