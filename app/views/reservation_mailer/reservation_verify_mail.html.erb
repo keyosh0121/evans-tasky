@@ -5,7 +5,7 @@
     <%= @reservation.name %>様<br>
     <%= @reservation.amount %>名様のご予約を承りました。<br>
     当日、会場でお会いできるのを心から楽しみにしております！<br><br>
-    <% if @reservation.side == "west" %>
+    <% if @reservation.side == 1 %>
     日程：2018年3月13日<br>
     会場：梅田TRAD <br>
     <% else %>
