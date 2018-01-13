@@ -1,0 +1,25 @@
+
+  <h2>ご予約ありがとうございます</h2>
+  <div class="description">
+    <%= @reservation.name %>様<br>
+    <%= @reservation.amount %>名様のご予約を承りました。<br>
+    当日、会場でお会いできるのを心から楽しみにしております！<br><br>
+    <% if @reservation.side == "west" %>
+    日程：2018年3月13日<br>
+    会場：梅田TRAD <br>
+    <% else %>
+    日程：2018年3月23日<br>
+    会場：大塚Deepa <br>
+    <% end %>
+  </div>
+  Tasky5, Evans' blue 一同
+
+  tasky5hark@gmail.com
+
+<style type="text/css" media="screen">
+  .description{
+    font-size: 13px;
+    padding: 16px;
+    border: 1px dotted #aaa;
+  }
+</style>

@@ -8,7 +8,13 @@ div{
 input{
   -webkit-appearance:none;
 }
-
+.notice{
+  padding:30px;
+  background-color: #711;
+  width:100%;
+  position: fixed;
+  color: #fff;
+}
 .loader-bg{
   display: none;
   position: fixed;
