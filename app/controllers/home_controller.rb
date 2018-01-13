@@ -57,4 +57,7 @@ class HomeController < ApplicationController
     end
     end
   end
+  def admin
+    @reservation = Reservation.all
+  end
 end

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get '/west/reserve' => 'home#reserve_west'
   post '/east/reserve' => 'home#reserve_east_send'
   post '/west/reserve' => 'home#reserve_west_send'
+  get '/admin' => 'home#admin'
 end
