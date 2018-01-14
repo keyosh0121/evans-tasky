@@ -2,6 +2,7 @@
 <% @reservation.where(side: 1).each do |res|%>
   <%= res.name + " " + res.amount.to_s + "名様" %><br>
 <% end %>
+<br><br>
 関東：現在 <%= @reservation.where(side: 0).count%> 件予約<br>
 <% @reservation.where(side: 0).each do |res|%>
   <%= res.name + " " + res.amount.to_s + "名様" %><br>
