@@ -49,7 +49,7 @@ class HomeController < ApplicationController
       side:dir_num
       )
     if @reservation.save
-      flash[:notice] = "関東公演へのご予約が完了しました"
+      flash[:notice] = "関西公演へのご予約が完了しました"
       ReservationMailer.reservation_verify_mail(@reservation).deliver
       redirect_to('/')
     else
