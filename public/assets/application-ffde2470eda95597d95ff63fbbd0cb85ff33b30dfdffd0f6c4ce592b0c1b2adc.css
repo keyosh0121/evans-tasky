@@ -1,0 +1,408 @@
+/* line 1, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/admin.scss */
+table {
+  margin: 24px;
+  font-size: 11px;
+}
+/* line 4, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/admin.scss */
+table th, table td {
+  padding: 4px 8px;
+  border: 1px solid #aaa;
+}
+/* line 5, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+div {
+  overflow: auto;
+}
+
+/* line 8, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+input {
+  -webkit-appearance: none;
+}
+
+/* line 11, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.notice {
+  padding: 30px;
+  background-color: #711;
+  width: 100%;
+  position: fixed;
+  color: #fff;
+}
+
+/* line 18, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+}
+
+/* line 28, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+/* line 41, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container {
+  padding: 0;
+  margin: 0;
+}
+/* line 44, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title {
+  padding: 130px 0;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Baskerville','Mincho';
+  background-color: #101021;
+  color: #fff;
+  background-image: url("top-back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 500px) {
+  /* line 44, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .top-container .title {
+    background-image: url("smart-back-top.png");
+  }
+}
+/* line 57, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .band-name {
+  font-size: 56px;
+}
+/* line 60, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title span {
+  font-size: 16px;
+}
+/* line 63, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title p {
+  font-weight: lighter;
+}
+/* line 67, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .detail-link {
+  display: block;
+  font-size: 16px;
+  width: 44%;
+  color: white;
+  background-color: #333;
+  padding: 24px 16px;
+  margin: 24px 3%;
+  float: left;
+  border-bottom: 5px #191919 solid;
+  font-family: 'Baskerville','Mincho';
+  text-align: left;
+}
+/* line 79, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .detail-link span {
+  font-size: 28px;
+}
+/* line 82, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .detail-link .presents {
+  font-size: 12px;
+}
+@media (max-width: 800px) {
+  /* line 67, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .top-container .title .detail-link {
+    width: 94%;
+  }
+}
+/* line 88, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .detail-link:hover {
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+/* line 97, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .detail-link:active {
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  -o-transform: translateY(4px);
+  transform: translateY(4px);
+  border: none;
+}
+/* line 106, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .each-link {
+  margin-top: 40px;
+  padding: 32px 0;
+  text-align: center;
+  margin: auto;
+  overflow: auto;
+  width: 800px;
+}
+@media (max-width: 800px) {
+  /* line 106, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .top-container .title .each-link {
+    width: 100%;
+  }
+}
+/* line 117, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .west {
+  background-color: #2d2f73;
+}
+/* line 120, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.top-container .title .east {
+  background-color: #411;
+}
+
+/* line 125, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner {
+  width: 100%;
+  color: #fff;
+  font-family: 'Baskerville','Mincho';
+}
+/* line 129, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .east-inner {
+  padding: 16px;
+  background-image: url("east");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 500px) {
+  /* line 129, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .detail-inner .east-inner {
+    background-image: url("east-smart");
+  }
+}
+/* line 137, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .east-inner .reserve-btn {
+  background-color: #9191ff;
+}
+/* line 141, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .west-inner {
+  padding: 16px;
+  background-image: url("west");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 500px) {
+  /* line 141, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .detail-inner .west-inner {
+    background-image: url("west-smart");
+  }
+}
+/* line 149, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .west-inner .reserve-btn {
+  background-color: #ff9090;
+}
+/* line 153, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-contents {
+  width: 850px;
+  margin: auto;
+  overflow: auto;
+}
+@media (max-width: 850px) {
+  /* line 153, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .detail-inner .detail-contents {
+    width: 100%;
+  }
+}
+/* line 162, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-description {
+  padding: 16px;
+  font-size: 13px;
+  border: dotted 1px #aaa;
+  margin-top: 16px;
+}
+/* line 167, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-description span {
+  font-size: 20px;
+}
+/* line 171, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-title {
+  padding: 100px 8px;
+  text-align: center;
+  font-size: 24px;
+}
+/* line 175, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-title .detail-present {
+  font-size: 14px;
+}
+/* line 178, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-title .koen {
+  font-size: 14px;
+}
+/* line 181, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-title .title-main {
+  font-size: 36px;
+}
+/* line 184, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .detail-title .live-date {
+  display: block;
+  padding-top: 30px;
+  font-size: 28px;
+}
+/* line 191, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .band-detail {
+  width: 50%;
+  padding: 16px;
+  overflow: auto;
+  float: left;
+}
+/* line 196, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .band-detail .band-name {
+  padding: 16px 0;
+  display: block;
+  font-size: 32px;
+}
+/* line 201, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .band-detail .band-description {
+  font-size: 13px;
+}
+/* line 205, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .band-detail img {
+  width: 100%;
+  margin: 8px 0;
+}
+@media (max-width: 500px) {
+  /* line 191, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .detail-inner .band-detail {
+    width: 100%;
+  }
+}
+/* line 213, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.detail-inner .reserve-btn {
+  padding: 16px;
+  color: fff;
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid #333;
+  border-radius: 5px;
+}
+@media (max-width: 500px) {
+  /* line 213, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .detail-inner .reserve-btn {
+    width: 100%;
+  }
+}
+
+/* line 225, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner {
+  color: #fff;
+  width: 100%;
+}
+/* line 228, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .form {
+  width: 800px;
+  padding: 80px 16px;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  /* line 228, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .form-inner .form {
+    width: 100%;
+  }
+}
+/* line 235, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .form .link {
+  padding: 16px;
+  background-color: salmon;
+  margin: 32px 0;
+}
+/* line 240, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .form .errors {
+  color: #fff;
+  padding: 16px;
+  font-size: 13px;
+  background-color: #f55;
+}
+/* line 248, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .east-form {
+  background-image: url("east.png");
+}
+@media (max-width: 600px) {
+  /* line 248, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+  .form-inner .east-form {
+    background-image: url("east-smart.png");
+  }
+}
+/* line 254, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .west-form {
+  background-image: url("west-smart.png");
+}
+/* line 260, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .title {
+  font-size: 28px;
+}
+/* line 263, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .description {
+  border: dotted 1px #aaa;
+  padding: 16px;
+  font-size: 13px;
+}
+/* line 268, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .content {
+  font-size: 13px;
+  padding: 4px 16px;
+  border-bottom: dotted 1px #aaa;
+  margin-top: 16px;
+}
+/* line 274, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner input, .form-inner select, .form-inner textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+}
+/* line 281, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner textarea {
+  height: 200px;
+}
+/* line 284, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner select {
+  height: 40px;
+}
+/* line 287, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .submit {
+  background-color: salmon;
+  height: 50px;
+  margin-top: 16px;
+}
+/* line 292, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/home.scss */
+.form-inner .caution {
+  font-size: 13px;
+  padding: 16px;
+  border: dotted 1px #aaa;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #900;
+  margin-top: 16px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ *{
+  margin: 0;
+  box-sizing: border-box;
+ }
+html, body{
+
+}

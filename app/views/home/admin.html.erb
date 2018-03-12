@@ -1,9 +1,43 @@
 関西：現在 <%= @reservation.where(side: 1).count%> 件予約<br>
+<table>
+  <thead>
+    <tr>
+      <th>氏名</th>
+      <th>email</th>
+      <th>人数</th>
+      <th>アドレス</th>
+    </tr>
+  </thead>
+<tbody>
 <% @reservation.where(side: 1).each do |res|%>
-  <%= res.name + " " + res.amount.to_s + "名様" %><br>
+      <tr>
+        <td><%= res.name %></td>
+        <td><%= res.email %></td>
+        <td><%= res.amount %></td>
+        <td><%= res.message %></td>
+      </tr>
+  </tbody>
 <% end %>
+</table>
 <br><br>
 関東：現在 <%= @reservation.where(side: 0).count%> 件予約<br>
+<table>
+  <thead>
+    <tr>
+      <th>氏名</th>
+      <th>email</th>
+      <th>人数</th>
+      <th>アドレス</th>
+    </tr>
+  </thead>
+  <tbody>
 <% @reservation.where(side: 0).each do |res|%>
-  <%= res.name + " " + res.amount.to_s + "名様" %><br>
+      <tr>
+        <td><%= res.name %></td>
+        <td><%= res.email %></td>
+        <td><%= res.amount %></td>
+        <td><%= res.message %></td>
+      </tr>
+  </tbody>
 <% end %>
+</table>

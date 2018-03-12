@@ -1,0 +1,10 @@
+/* line 1, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/admin.scss */
+table {
+  margin: 24px;
+  font-size: 11px;
+}
+/* line 4, /Users/str121kei/workspace/TaskyEvans/app/assets/stylesheets/admin.scss */
+table th, table td {
+  padding: 4px 8px;
+  border: 1px solid #aaa;
+}
